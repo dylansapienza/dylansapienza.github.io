@@ -151,11 +151,6 @@ p.copyright {
   margin: 15px 0 0;
 }
 
-/*
- *Scrolling
- http://jsfiddle.net/YYPKM/3/
- */
-
 a[id="about"]:target {
   -webkit-transform: translateY(0px);
   transform: translateY(0px);
