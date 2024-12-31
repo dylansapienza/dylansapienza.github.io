@@ -8,247 +8,242 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <meta name="description" content="Dylan Sapienza's Project and Information Page.">
+    <meta name="theme-color" content="#0d6efd" />
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
-      />
-
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
-      
-
-      <link rel="stylesheet" type="text/css" href="landing-page.css">
-
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="landing-page.css">
 
     <title>Dylan Sapienza</title>
   </head>
   <body>
-    <nav
-      class="navbar navbar-dark navbar-expand-lg navbar-fixed-top bg-dark fixed-top"
-    >
-      <a class="navbar-brand" href="#">Dylan Sapienza</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="project.html">Projects</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Articles</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="content-section-a" id="about">
-    <div class="container">
-      <div class="row">
-        <div id="headshot-column" class="col-md-4 ml-auto">
-          <img
-            class="img-fluid headshot rounded"
-            src="img/dsapienza.jpg"
-            alt=""
-          />
-        </div>
-        <div class="col-lg-5 mr-auto order-lg-1">
-          <br>
-          <h2 class="section-heading">
-            Dylan Sapienza
-          </h2>
-          <p class="lead">
-            I am studying Computer Science and Philosophy at
-            <a href="https://www.gwu.edu/">
-              The George Washington University.
-            </a>
-            I am an Intern at
-            <a href="https://www.newyorklife.com/">New York Life </a> within Project Management and Agile Development. 
-            I have recently finished a <a href="https://philosophy.columbian.gwu.edu/undergraduate-resources-funding#:~:text=Thacher%2DReynolds%20Memorial%20Fellowship&text=The%20fellowship%20provides%20%243%2C000%20to,and%20academic%20year%20at%20GW.&text=Must%20submit%20a%20proposal%20in,a%20Philosophy%20Department%20faculty%20member."> Thacher-Reynolds Fellowship Research Thesis</a>. I have deep concerns and interests about the ethical
-            use and development of technology.
-          </p>
-          <br />
-          <ul class="list-inline banner-social-buttons" style="float: none;">
-            <li class="list-inline-item">
-              <a
-                href="files/DylanSapienza_resume.pdf"
-                class="btn btn-secondary btn-lg"
-              >
-                <span class="network-name">Resume</span>
-              </a>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Dylan Sapienza</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.dylansapienza.com/much-ado-about-everything">Blog</a>
             </li>
-            <li class="list-inline-item">
-              <a
-                href="https://github.com/dylansapienza"
-                class="btn btn-secondary btn-lg"
-              >
-
-             <span class="network-name">Github</span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a
-                href="https://www.linkedin.com/in/dylansapienza/"
-                class="btn btn-secondary btn-lg white-tooltip"
-              >
-                
-                <span class="network-name">LinkedIn</span>
-              </a>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a>
             </li>
           </ul>
         </div>
       </div>
-    </div>
-    </div>
+    </nav>
 
-    <div class="container">
-      <br>
-      <br>
-      <h2><b>My Work</b></h2>
-      <br>
-      <div class="accordion" id="accordionExample">
-        <div class="card">
-          <div class="card-header" id="headingOne">
-            <button
-              class="btn"
-              type="button"
-              data-toggle="collapse"
-              data-target="#collapseOne"
-              aria-expanded="true"
-              aria-controls="collapseOne"
-            >
-              <h5>Computer Science Projects</h5>
-            </button>
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h5 class="modal-title" id="contactModalLabel">Get in Touch</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-
-          <div
-            id="collapseOne"
-            class="collapse show"
-            aria-labelledby="headingOne"
-            data-parent="#accordionExample"
-          >
-            <div class="body p-2">
-              <ul class="list-inline list-docs">
-                
-                <li>
-                  <a href="https://github.com/dylansapienza/spotify-playlist-app" target="_blank">Linked Playlists for Spotify</a> ⋅ Summer 2020 
-                  <br> <i class="meta">A Social Collaborative Playlist Service for Spotify Users </i>
-                  
-                  <br><span class="authors">
-                    React, Node.js, Express and MongoDB
-                  </span>
-                  
-                </li>
-                <li>
-                  <a href="https://github.com/dylansapienza/ClearCall" target="_blank">Clear Call</a> ⋅ April 2020 
-                  <br> <i class="meta">Clear Call is a Peer-To-Peer Video Chat Service</i>
-                  
-                  <br><span class="authors">
-                    WebRTC, jQuery, PeerJS
-                  </span>
-                  
-                </li>
-                <li>
-                  <a href="https://github.com/dylansapienza/RecyclingVision" target="_blank">Recycling Machine Sorting</a> ⋅ November 2019
-                  <br> <i class="meta">Uses Imagery to Determine Recycle Material Type</i>
-                  
-                  <br><span class="authors">
-                    Java, Google Cloud, ML
-                  </span>
-                  
-                </li>
-              </ul>
+          <div class="modal-body text-center">
+            <p class="lead mb-4">Feel free to reach out to me at:</p>
+            <div class="email-container">
+              <i class="fas fa-envelope"></i>
+              <p class="email-link">Find it on my resume!</a>
             </div>
           </div>
         </div>
-        <div class="card">
-          <div class="card-header" id="headingTwo">
-              <button
-                class="btn"
-                type="button"
-                data-toggle="collapse"
-                data-target="#collapseTwo"
-                aria-expanded="true"
-                aria-controls="collapseTwo"
-              >
-                <h5>Philosophy and Writings</h5>
-              </button>
-          </div>
-          <div
-            id="collapseTwo"
-            class="collapse"
-            aria-labelledby="headingTwo"
-            data-parent="#accordionExample"
-          >
-          <div class="body p-2">
-          <ul class="list-inline list-docs">
-
-            <li>
-              <a href="files/Sapienza_FellowshipThesis.pdf" target="_blank">Debunking Arguments and Ethical Intuitionism: How Thought Experiments Can Help or Hinder our Understanding of Morality</a> ⋅ 2022
-              <br> <i class="meta">Thacher-Reynolds Fellowship Research & Honors Thesis</i>
-              
-            </li>
-
-            <li>
-              <a href="files/Sapienza_CompoundEvidence.pdf" target="_blank">Compound Evidence: A Defense of Uniqueness Theory</a> ⋅ Fall 2021 
-              <br> <i class="meta">Term Paper in The Ethics of Belief</i>
-              
-            </li>
-
-            <li>
-              <a href="files/Sapienza_ExpressivismCritique.pdf" target="_blank">Moral Consensus: A Critique of Ayer’s Moral Expressivism</a> ⋅ Fall 2021 
-              <br> <i class="meta">Term Paper in Analytic Philosophy</i>
-              
-            </li>
-            
-            
-              <li>
-              <a href="https://dylansapienza.medium.com/a-new-approach-for-social-media-id-verification-fc0148a671f" target="_blank">A New Approach for Social Media ID Verification</a> ⋅ Fall 2020 
-            
-              
-            </li>
-                
-            <li>
-              <a href="https://medium.com/@dylansapienza/limitations-of-language-in-platonic-inquiry-c82c55f0c3c9" target="_blank">Limitations of Language in Platonic Inquiry</a> ⋅ Spring 2020 
-              <br> <i class="meta">Curated by Medium Philosophy Section </i>
-            
-              
-            </li>
-            <li>
-              <a href="https://medium.com/@dylansapienza/defying-intuition-in-the-knowledge-argument-for-qualia-45598f17099d" target="_blank">Defying Intuition in The Knowledge Argument for Qualia</a> ⋅ Fall 2019 
-            
-              
-            </li>
-            <li>
-              <a href="https://medium.com/@dylansapienza/passive-listening-what-is-it-do-you-do-it-should-we-be-worried-1aa686bff8d3" target="_blank">Passive Listening in Music</a> ⋅ Fall 2018
-              <br> <i class="meta">2000+ Views on Medium</i>
-              
-            </li>
-            <li>
-              <a href="https://becominghuman.ai/the-case-of-unregulated-exponential-technological-development-3364f681b271" target="_blank">The Case of Unregulated Technological Development</a> ⋅ Fall 2018
-              <br> <i class="meta">Published in Becoming Human: Online AI Magazine</i>
-              
-            </li>
-          </ul>
-        </div>
-          </div>
-        </div>
+      </div>
     </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8 order-lg-1">
+            <div class="hero-content">
+              <h1 class="hero-title">Dylan Sapienza</h1>
+              <p class="hero-subtitle">Artificial Intelligence • Philosophy • Writing</p>
+              <div class="hero-text">
+                <p>
+                  I am currently building artificial intelligence products at 
+                  <a href="https://www.newyorklife.com/" target="_blank">New York Life Insurance</a>.
+                  I am also a writer and philosopher exploring the intersection of technology, ethics, and society.
+                </p>
+                <p class="blog-highlight">
+                  Read my thoughts on <a href="www.dylansapienza.com/much-ado-about-everything" class="blog-link">Much Ado About Everything <i class="fas fa-arrow-right"></i></a>
+                </p>
+              </div>
+              <div class="hero-links">
+                <a href="https://www.linkedin.com/in/dylansapienza/" class="btn btn-primary" target="_blank">
+                  <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="files/DylanSapienza_resume.pdf" class="btn btn-outline-primary" target="_blank">
+                  <i class="fas fa-file-alt"></i> Resume
+                </a>
+                <a href="https://www.github.com/dylansapienza/" class="btn btn-outline-primary" target="_blank">
+                  <i class="fab fa-github"></i> Github
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 order-lg-2 text-center">
+            <div class="hero-image">
+              <img src="img/dsapienza.jepg" alt="Dylan Sapienza" class="profile-image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="blog-heading">Much Ado About Everything</h2>
+          <p class="lead blog-subtitle">Exploring philosophy, technology, and everything in between</p>
+        </div>
+        
+        <div class="row g-4 featured-posts">
+          <!-- Featured Post -->
+          <div class="col-md-6">
+            <div class="featured-post">
+              <div class="post-content">
+                <span class="post-category">Philosophy</span>
+                <h3 class="post-title">Boredom and The Wall</h3>
+                <div class="post-quote">
+                  <i class="fas fa-quote-left quote-icon"></i>
+                  <p>We've mastered the art of staying busy, but have we lost the gift of being bored?</p>
+                </div>
+                <div class="post-meta">
+                  <span class="post-date">December 2024</span>
+                  <a href="www.dylansapienza.com/much-ado-about-everything/posts/boredom-the-wall/" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Another Featured Post -->
+          <div class="col-md-6">
+            <div class="featured-post">
+              <div class="post-content">
+                <span class="post-category">Artificial Intelligence</span>
+                <h3 class="post-title">Are We Outsourcing Reasoning To AI?</h3>
+                <div class="post-quote">
+                  <i class="fas fa-quote-left quote-icon"></i>
+                  <p>The outsourcing of human thought doesn't announce itself; it arrives in the quiet moments when reaching for AI becomes easier than reaching into our own minds.</p>
+                </div>
+                <div class="post-meta">
+                  <span class="post-date">December 2024</span>
+                  <a href="www.dylansapienza.com/much-ado-about-everything/posts/outsourcing-reasoning-to-ai/" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Recent Posts Grid -->
+        <div class="row g-4 mt-4 recent-posts">
+          <div class="col-md-4">
+            <div class="recent-post">
+              <span class="post-category">Tech Ethics</span>
+              <h4>Who Is Reinforcing Who? Recommendation Algorithms</h4>
+              <p class="post-excerpt">The most successful recommendation algorithms don't just predict what you'll watch—they shape who you'll become.</p>
+              <div class="post-meta">
+                <span class="post-date">September 2024</span>
+                <a href="www.dylansapienza.com/much-ado-about-everything/posts/dualeffect-recommendations/dualeffect-recommendations/" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="recent-post">
+              <span class="post-category">Philosophy</span>
+              <h4>You Know It When You See It: Knowing Without Knowing</h4>
+              <p class="post-excerpt">So much of our knowledge falls into the category of knowing it when you see it, what does that mean for us?</p>
+              <div class="post-meta">
+                <span class="post-date">July 2024</span>
+                <a href="www.dylansapienza.com/much-ado-about-everything/posts/youknowitwhenyouseeit/youknowitwhenyouseeit/" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="recent-post">
+              <span class="post-category">Artificial Intelligence</span>
+              <h4>Large Language Models and The Utility of Personas</h4>
+              <p class="post-excerpt">The difference between raw AI models and chatbots isn't just in what they know, but in who they pretend to be.</p>
+              <div class="post-meta">
+                <span class="post-date">April 2024</span>
+                <a href="www.dylansapienza.com/much-ado-about-everything/posts/llm-personas/llm-personas/" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-5">
+          <a href="#" class="btn btn-primary btn-lg">View All Posts</a>
+        </div>
+      </div>
+    </section>
+
+        <!-- Thesis Section -->
+        <section class="thesis-section">
+          <div class="container">
+            <div class="thesis-card">
+              <div class="row align-items-center">
+                <div class="col-lg-8">
+                  <span class="thesis-badge">Fellowship Thesis</span>
+                  <h2 class="thesis-title">Debunking Arguments and Ethical Intuitionism</h2>
+                  <h3 class="thesis-subtitle">How Thought Experiments Can Help or Hinder our Understanding of Morality</h3>
+                  <p class="thesis-description">
+                    A philosophical exploration of moral intuitions and their role in ethical reasoning. This thesis, completed under the 
+                    Thacher-Reynolds Fellowship, examines how thought experiments shape our understanding of morality and their implications 
+                    for ethical decision-making.
+                  </p>
+                  <div class="thesis-meta">
+                    <span class="thesis-info">
+                      <i class="fas fa-university"></i>
+                      The George Washington University
+                    </span>
+                    <span class="thesis-info">
+                      <i class="fas fa-calendar"></i>
+                      2022
+                    </span>
+                  </div>
+                  <div class="thesis-actions">
+                    <a href="files/Sapienza_FellowshipThesis.pdf" class="btn btn-primary" target="_blank">
+                      <i class="fas fa-book"></i> Read Thesis
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                  <div class="thesis-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
     
+
     <br>
     <br>
     <br>
@@ -275,5 +270,21 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
+    
+    <!-- Bootstrap 5 Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom scroll behavior for navbar -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 50) {
+            document.querySelector('.navbar').style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+          } else {
+            document.querySelector('.navbar').style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
+          }
+        });
+      });
+    </script>
   </body>
 </html>
