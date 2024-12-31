@@ -196,6 +196,7 @@ h6 {
   padding: 2rem;
   height: 100%;
   transition: all var(--transition-speed) ease;
+  border: 1px solid rgba(13, 110, 253, 0.1);
 }
 
 .featured-post:hover {
@@ -272,12 +273,12 @@ h6 {
 
 /* Recent Posts */
 .recent-post {
-  background-color: white;
+  background-color: var(--background-light);
   border-radius: 12px;
   padding: 1.5rem;
-  height: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
   transition: all var(--transition-speed) ease;
+  border: 1px solid rgba(13, 110, 253, 0.1);
 }
 
 .recent-post:hover {
@@ -380,45 +381,103 @@ h6 {
 .hero-image {
   position: relative;
   padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
 }
 
-.profile-image {
+.logic-symbol {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Computer Modern Serif', 'Latin Modern Math', 'Times New Roman', serif;
+  font-size: 4.8rem;
+  color: var(--primary-color);
+  opacity: 0.95;
+}
+
+.logic-symbol::before {
+  content: 'P → Q';
+  position: absolute;
+  font-weight: 500;
+  background: linear-gradient(45deg, var(--primary-color), #0099ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transform-origin: center;
+  animation: gentle-float 4s ease-in-out infinite;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  padding: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+}
+
+.logic-symbol::after {
+  content: '';
+  position: absolute;
   width: 280px;
   height: 280px;
-  object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  transition: all var(--transition-speed) ease;
+  border: 1.5px solid rgba(13, 110, 253, 0.12);
+  border-radius: 50%;
+  animation: rotate 40s linear infinite;
 }
 
-.profile-image:hover {
-  transform: translateY(-5px) rotate(2deg);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+.logic-symbol .inner-circle {
+  width: 260px;
+  height: 260px;
+  border: 1px solid rgba(13, 110, 253, 0.08);
+  animation: rotate-reverse 50s linear infinite;
+}
+
+@keyframes gentle-float {
+  0%, 100% {
+    transform: translateY(0);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+  50% {
+    transform: translateY(-6px);
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rotate-reverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
 }
 
 @media (max-width: 991px) {
-  .hero-section {
-    padding: 6rem 0 3rem;
-    text-align: center;
+  .logic-symbol {
+    width: 260px;
+    height: 260px;
+    font-size: 3.8rem;
   }
-
-  .hero-content {
-    padding-right: 0;
-    margin-bottom: 3rem;
-  }
-
-  .hero-title {
-    font-size: 2.8rem;
-  }
-
-  .hero-links {
-    justify-content: center;
-  }
-
-  .profile-image {
+  
+  .logic-symbol::after {
     width: 220px;
     height: 220px;
   }
+  
+  .logic-symbol .inner-circle {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* Remove old styles */
+.theme-design, .brain-circuit, .code-element, .neural-dots, .neural-dot, .neural-line {
+  display: none;
 }
 
 .blog-highlight {
